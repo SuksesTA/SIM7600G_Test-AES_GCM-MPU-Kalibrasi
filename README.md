@@ -1,13 +1,13 @@
-# GPS Tracker with SIM7600G, MQTT and AES-GCM Encrypt
+# GPS Tracker with SIM7600G, MQTT and AES-GCM
 
-This project demonstrates a GPS tracker using the SIM7600G module and MQTT for data transmission.
+This project demonstrates a GPS tracker using the SIM7600G module, MQTT for data transmission and AES-GCM for encrypt data.
 
 ## Features
 
 - **GPS Tracking:** Retrieves GPS coordinates using the SIM7600G module.
 - **DHT22 Sensor:** Reads temperature and humidity data from a DHT22 sensor.
 - **MPU6050 Sensor:** Reads Gyroscope and Accelerometer data from a MPU6050 sensor.
-- **Battery Sensor:** Reads Voltage Battery and Percent Battery from a MAX17048 sensor.
+- **Battery Sensor:** Reads Voltage and Percent Battery from a MAX17048 sensor.
 - **MQTT Communication:** Publishes GPS and sensor data to an MQTT broker.
 - **OLED Display:** Displays GPS coordinates and sensor readings on an OLED screen.
 - **Data Logging:** Saves GPS coordinates to a file for offline access.
