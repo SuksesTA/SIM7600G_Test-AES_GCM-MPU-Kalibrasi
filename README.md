@@ -1,4 +1,4 @@
-# GPS Tracker with SIM7600G and MQTT
+# GPS Tracker with SIM7600G, MQTT and AES-GCM Encrypt
 
 This project demonstrates a GPS tracker using the SIM7600G module and MQTT for data transmission.
 
@@ -7,6 +7,7 @@ This project demonstrates a GPS tracker using the SIM7600G module and MQTT for d
 - **GPS Tracking:** Retrieves GPS coordinates using the SIM7600G module.
 - **DHT22 Sensor:** Reads temperature and humidity data from a DHT22 sensor.
 - **MPU6050 Sensor:** Reads Gyroscope and Accelerometer data from a MPU6050 sensor.
+- **Battery Sensor:** Reads Voltage Battery and Percent Battery from a MAX17048 sensor.
 - **MQTT Communication:** Publishes GPS and sensor data to an MQTT broker.
 - **OLED Display:** Displays GPS coordinates and sensor readings on an OLED screen.
 - **Data Logging:** Saves GPS coordinates to a file for offline access.
@@ -18,6 +19,7 @@ This project demonstrates a GPS tracker using the SIM7600G module and MQTT for d
 - DHT22 temperature and humidity sensor
 - MPU6050 gyroscope and accelerometer sensor
 - OLED display (SSD1306)
+- Battery Sensor (MAX17048)
 
 ## Software Requirements
 
@@ -46,13 +48,19 @@ This project demonstrates a GPS tracker using the SIM7600G module and MQTT for d
 - **OLED/SSD1306.h:** Header file for the OLED display.
 - **DHT/DHT22.h:** Header file for the DHT22 sensor.
 - **MPU6050_code.cpp:** Implementation file for the MPU6050 module.
-- **MPU6050.h:** Header file for the MPU6050 sensor
+- **MPU6050.h:** Header file for the MPU6050 sensor.
+- **MAX17048.code_cpp:** Implementation file for the MAX17048 module.
+- **MAX17048.h:** Header file for the MAX17048 sensor.
 - **Data/DataHandler.h:** Header file for data handling functions.
-
+- **aes_gcm_code.cpp:** Implementation file for the AES-GCM Encrypt.
+- **aes_gcm.h:** Header file for the AES-GCM Encrypt.
+- **payload.h:** Header file for the AES-GCM payload main.cpp.
+  
 ## Customization
 
 - **MQTT Topic:** Modify the `topic` variable in `SIM7600G_code.cpp` to change the MQTT topic for data publication.
-- **Display:** Customize the OLED display content by modifying the `gpsDisplay()`,`dhtDisplay()` and `mpudisplay()` functions in `main.cpp`.
+- **Encrypt Key:** Modify the `AES_KEY` variable in `main.cpp` to change the AES-GCM Key for decrypt the payload.
+- **Display:** Customize the OLED display content by modifying the `gpsDisplay()`,`dhtDisplay()`,`speedDisplay()` and `mpudisplay()` functions in `main.cpp`.
 
 ## Notes
 
